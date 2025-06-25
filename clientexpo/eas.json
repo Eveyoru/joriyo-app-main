@@ -1,0 +1,44 @@
+{
+  "cli": {
+    "version": ">= 3.13.3",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "release": {
+      "android": {
+        "buildType": "apk",
+        "image": "latest",
+        "distribution": "internal",
+        "developmentClient": false,
+        "env": {
+          "ENABLE_HERMES": "true"
+        },
+        "cache": {
+          "key": "gradle-{{ hashFiles('android/gradle/wrapper/gradle-wrapper.properties') }}-{{ hashFiles('android/build.gradle') }}"
+        },
+        "gradleCommand": ":app:assembleRelease",
+        "applicationArchivePath": "android/app/build/outputs/apk/release/app-release.apk"
+      },
+      "node": "18.18.0"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
