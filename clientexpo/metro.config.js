@@ -7,8 +7,5 @@ const config = getDefaultConfig(__dirname);
 
 
 
-// Enable symlinks
-config.watcher.additionalExts = ["mjs", "cjs"];
-config.resolver.sourceExts = [...config.resolver.sourceExts, "mjs", "cjs"];
 
 module.exports = config;
