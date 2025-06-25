@@ -35,6 +35,14 @@
     "scheme": "joriyo",
     "experiments": {
       "tsconfigPaths": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f41315ae-90bd-429a-9de3-8eb4cff37d80"
+      }
     }
   }
 }
