@@ -23,6 +23,7 @@
         "foregroundImage": "./assets/images/joiryologoicon.jpg",
         "backgroundColor": "#3498db"
       },
+      "kotlinVersion": "1.8.0",
       "package": "com.sushant392.clientexpo"
     },
     "web": {
