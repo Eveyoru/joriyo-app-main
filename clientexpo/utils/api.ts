@@ -5,12 +5,12 @@ import { Platform } from 'react-native';
 // For development - points to local server
 export function getBaseUrl() {
   if (__DEV__) {
-    // Use localhost for iOS simulator and Android emulator
-    // For physical devices, use your computer's local IP address
-    return 'http://192.168.1.6:8080';
+    // Use your computer's local IP address for development
+    // On Windows, find this by running 'ipconfig' in Command Prompt
+    return 'http://192.168.1.64:8080'; // Replace with your actual IP
   }
   // Production URL (when building for production)
-  //return 'https://joriyo-server.vercel.app';
+  return 'http://localhost:8080';
 }
 
 // Helper function to check if the server is reachable
@@ -136,7 +136,7 @@ export const getFullImageUrl = (url: string | null): string | null => {
     }
 
     // For relative URLs, prepend base URL
-    const baseUrl = 'https://joriyo-server.vercel.app';
+    const baseUrl = 'http://localhost:8080';
     return `${baseUrl}/${url.startsWith('/') ? url.slice(1) : url}`;
 
   } catch (error) {

@@ -4,10 +4,15 @@
  */
 import { Platform } from 'react-native';
 
-// Base URL configuration - dynamically selects the appropriate server URL
+// Base URL configuration - matches the configuration in utils/api.ts
 const getBaseUrl = () => {
-  // Use the local server URL with the correct IP address
-  return 'https://joriyo-server.vercel.app';
+  if (__DEV__) {
+    // Use your computer's local IP address for development
+    // On Windows, find this by running 'ipconfig' in Command Prompt
+    return 'http://192.168.1.64:8080'; // Replace with your actual IP
+  }
+  // Production URL (when building for production)
+  return 'http://localhost:8080';
 };
 
 // Storage for the authentication token

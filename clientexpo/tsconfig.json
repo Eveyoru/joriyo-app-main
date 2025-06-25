@@ -1,11 +1,12 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json",
+  "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
     "baseUrl": ".",
     "jsx": "react-native",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
     "paths": {
       "@/*": [
         "./*"
@@ -23,6 +24,8 @@
   "exclude": [
     "node_modules",
     "babel.config.js",
-    "jest.config.js"
+    "jest.config.js",
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ]
 }

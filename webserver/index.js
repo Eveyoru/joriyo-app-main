@@ -39,8 +39,8 @@ app.use(cors({
             'http://127.0.0.1:8081',
             'http://127.0.0.1:3000',
             'exp://',                     // All Expo URLs
-            'http://192.168.1.',          // Common local network
-            'http://192.168.0.',          // Common local network
+            'http://192.168.1.64:8080',          // Common local network
+            'http://192.168.0.64:8080',          // Common local network
             'http://10.0.2.2:8080',       // Android emulator to localhost
             'http://10.0.3.2:8080'        // Genymotion to localhost
         ];
