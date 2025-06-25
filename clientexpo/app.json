@@ -16,14 +16,14 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.sergio101.clientexpo"
+      "bundleIdentifier": "com.sushant392.clientexpo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/joiryologoicon.jpg",
         "backgroundColor": "#3498db"
       },
-      "package": "com.sergio101.clientexpo"
+      "package": "com.sushant392.clientexpo"
     },
     "web": {
       "bundler": "metro",
