@@ -6,6 +6,11 @@ module.exports = function(api) {
     plugins: [
       // Important: Reanimated plugin needs to be listed last',
       'react-native-reanimated/plugin',
+      ["module-resolver", {
+        alias: {
+          "^react-native$": "react-native"
+        }
+      }]
     ].filter(Boolean),
   };
 };
